@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="upper">
+        <!-- <div id="dots">
+            <div id="row">
+                <div id="col1">
+                    <span class="dot1"></span>
+                </div>
+                <div id="col2">
+                    <span class="dot2"></span>
+                </div>
+                <div id="col3">
+                    <span class="dot3"></span>
+                </div>
+            </div>
+        </div> -->
+        <div id="title">
+            <p>COLIN_VANMIGOM.html - Développeur Senior Web Fullstack</p>
+        </div>
+        <!-- <div id="social">
+            <img src="./linkedinLogo.png">
+        </div> -->
+    </div>
+    <div class="global">
+        <div id="icons-left">
+            <img src="./assets/image/Capture d’écran 2023-02-08 à 12.03.03.png" style="width: -moz-available; border-radius: 15px 0px 0px 15px;">
+        </div>
+        <div id="explorer-files">
+            <p id="explorer">Explorer</p>
+            <hr class="solid">
+            <button onclick="ShowDiv()" class="target"><img src="./assets/typeLogo/htmllog.png" class="logoExt">Présentation.html</button><br>
+            <button onclick="ShowDiv2()" class="target"><img src="./assets/typeLogo/htmllog.png" class="logoExt">Compétences.html</button><br>
+            <button onclick="ShowDiv3()" class="target"><img src="./assets/typeLogo/jslogo.png" class="logoExt">Experiences_professionnelles.js</button><br>
+            <button onclick="ShowDiv4()" class="target"><img src="./assets/typeLogo/csslogo.png" class="logoExt">Formations.css</button><br>
+            <button onclick="window.open('./assets/document/cv_Colin_VanMigom.pdf')"><img src="./assets/typeLogo/csslogo.png" class="logoExt">Télécharger_Mon_CV.css</button><br>
+        </div>
+        <div id="code">
+            <div id="startGlobal">
+                <img id="arrowLeft" src="./assets/image/arrowLeft.png">
+
+                <div id="startHello">
+                    <h1>Bienvenue</h1>
+                    <hr class="rounded">
+                    <h3>Pour commencer, veuillez cliquer sur un fichier</h3>
+                </div>
+            </div>
+            <iframe id="pres" style="display: none; border-radius: 0px 15px 15px 0px;" src="./presentation.html" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p class="text-center"><span class="text-uppercase">Colin Van Migom</span> - 2023 - Tous droits réservés</p>
+        </div>
+    </footer>
+  </body>
+</html>
+<script>
+    function ShowDiv() {
+        document.getElementById("startGlobal").style.display = "none";
+        document.getElementById("pres").style.display = "";
+        document.getElementById('pres').contentWindow.document.getElementById('presentation').scrollIntoView({
+        behavior: 'smooth'
+    });
+    }
+    function ShowDiv2() {
+        document.getElementById("startGlobal").style.display = "none";
+        document.getElementById("pres").style.display = "";
+        document.getElementById('pres').contentWindow.document.getElementById('skills').scrollIntoView({
+        behavior: 'smooth'
+    });
+    }
+    function ShowDiv3() {
+        document.getElementById("startGlobal").style.display = "none";
+        document.getElementById("pres").style.display = "";
+        document.getElementById('pres').contentWindow.document.getElementById('expe_pro').scrollIntoView({
+        behavior: 'smooth'
+    });
+    }
+    function ShowDiv4() {
+        document.getElementById("startGlobal").style.display = "none";
+        document.getElementById("pres").style.display = "";
+        document.getElementById('pres').contentWindow.document.getElementById('school').scrollIntoView({
+        behavior: 'smooth'
+    });
+    }
+</script>
+<style>
+    @keyframes fadeOut {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+        }
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+        }
+    @keyframes myfirst {
+        0%   {left: 50px; right: 0px;}
+        50%  {left: 0px; right: 50px;}
+        100% {left: 50px; right: 0px;}
+        }
+    #arrowLeft {
+        position: relative;
+        width: 50px;
+        margin-top: 60px;
+        animation: myfirst 5s infinite;
+    }
+    #explorer {
+        color: aliceblue;
+        margin-left: 10%;
+    }
+    hr.solid {
+        border-top: 3px solid #bbb;
+    }
+    hr.rounded {
+        width: 80%;
+        border-top: 8px solid aliceblue;
+        border-radius: 5px;
+    }
+    #startHello {
+        font-size: xx-large;
+        margin: 0 auto;
+        text-align: center;
+        color: aliceblue;
+    }
+    .logoExt {
+        width: 20px;
+    }
+    .global {
+        border-radius: 15px 15px 15px 15px;
+        box-shadow: 10px 10px 10px 10px black;
+        content: "";
+        display: table;
+        clear: both;
+        width: 100%;
+        height: 100vh;
+    }
+    body {
+        background-color: #3c3c3c;
+        font-family: 'Dosis', sans-serif;
+    }
+    #icons-left {
+        border-radius: 15px 0px 0px 15px;
+        float: left;
+        background-color: #333333;
+        width: 4%;
+        height: inherit;
+    }
+    #explorer-files {
+        float: left;
+        background-color: #252526;
+        width: 21%;
+        height: inherit;
+    }
+    #explorer-files button {
+        background-color: #252526;
+        text-align: left;
+        width: 100%;
+        margin-top: 5px;
+        border: none;
+        color: aliceblue;
+        padding: 5px;
+    }
+    #explorer-files button:active {
+        background-color: #37373c;
+        text-align: left;
+        width: 100%;
+        margin-top: 5px;
+        border: none;
+        color: aliceblue;
+    }
+    #explorer-files button:target {
+        background-color: #37373c;
+        text-align: left;
+        width: 100%;
+        margin-top: 5px;
+        border: none;
+        color: aliceblue;
+    }
+    #explorer-files button:hover {
+      background-color:#2b2d2e;
+      transition: 0.7s;
+  }
+
+    #code {
+        border-radius: 0px 15px 15px 0px;
+        float: left;
+        background-color: #1e1e1e;
+        width: 75%;
+        height: inherit;
+    }
+    #row {
+        display: table;
+    }
+    #col1 {
+        margin: 5px;
+        float: left;
+    }
+    #col2 {
+        margin: 5px;
+        float: left;
+    }
+    #col3 {
+        margin: 5px;
+        float: left;
+    }
+    #upper {
+        display: table;
+        background-color: #3c3c3c;
+        height: 4%;
+        width: -moz-available;
+    }
+    #upper p {
+        color: aliceblue;
+    }
+    #upper #title {
+        text-align: center;
+    }
+    #upper #social img {
+        width: 70px;
+    }
+    #dots {
+        display: contents;
+        float: left;
+    }
+    #social {
+        float: right;
+    }
+    .dot1 {
+        height: 25px;
+        width: 25px;
+        background-color: #ff5f58;
+        border-radius: 50%;
+        display: inline-block;
+        margin-bottom: -1%;
+        margin-right: 0.5%;
+    }
+    .dot2 {
+        height: 25px;
+        width: 25px;
+        background-color: #febc2e;
+        border-radius: 50%;
+        display: inline-block;
+        margin-bottom: -1%;
+        margin-right: 0.5%;
+    }
+    .dot3 {
+        height: 25px;
+        width: 25px;
+        background-color: #25c740;
+        border-radius: 50%;
+        display: inline-block;
+        margin-bottom: -1%;
+        margin-right: 0.5%;
+    }
+    footer {
+        text-align: center;
+        border-radius: 15px 15px 15px 15px;
+        color: aliceblue;
+        background-color: #026fba;
+    }
+    
+</style>
