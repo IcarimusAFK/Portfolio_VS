@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="background" src="./assets/image/test.jpeg">
+      </a-assets>
+      <a-sky src="#background"></a-sky>
+      <a-camera move-controls="enabled: false"></a-camera>
+      <!-- Desk -->
+      <a-box position="0 0.5 -1" depth="1" height="0.5" width="3" color="#420a06"></a-box>
+      <a-box position="0 0 -1" depth="0.1" height="0.2" width="2" color="#420a06"></a-box>
+
+      <!-- Computer Screen -->
+      <a-plane position="0.5 1.5 -1" rotation="0 -30 0" height="1" width="2" color="#3f3f3f"></a-plane>
+      <a-plane position="0.48 1.48 -1" rotation="0 -30 0" width="1.8" height="0.9" material="src: ./assets/image/bgScreen.png; transparent: true;"></a-plane>
+
+      <!-- Keyboard -->
+      <a-box position="0 0.7 -1" depth="0.5" height="0.2" width="1.8" color="#708090"></a-box>
+
+      <!-- Chair -->
+      <!-- Seat -->
+      <a-box position="0 0.5 0.5" depth="0.5" height="0.1" width="0.5" color="#708090"></a-box>
+      <!-- Back -->
+      <a-box position="0 0.8 0.7" depth="0.1" height="0.6" width="0.5" rotation="0 0 0" color="#708090"></a-box>
+      <!-- Legs -->
+      <a-cylinder position="-0.18 0.1 0.75" radius="0.05" height="0.7" color="#708090"></a-cylinder>
+      <a-cylinder position="0.18 0.1 0.75" radius="0.05" height="0.7" color="#708090"></a-cylinder>
+      
+      <a-cylinder position="-0.18 0.1 0.25" radius="0.05" height="0.7" color="#708090"></a-cylinder>
+      <a-cylinder position="0.18 0.1 0.25" radius="0.05" height="0.7" color="#708090"></a-cylinder>
+    </a-scene>
+  </body>
+</html>

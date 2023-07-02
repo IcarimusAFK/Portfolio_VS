@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <style>
+        .card {
+          width: 300px;
+          height: 150px;
+          padding: 20px;
+          background-color: rgb(255, 255, 255);
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px 0px grey;
+        }
+      </style>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="background" src="./assets/image/2g140lfd-360-panorama-home-interior.jpeg">
+      </a-assets>
+
+      <a-sky src="#background"></a-sky>
+
+      <a-entity id="login-form">
+        <a-text value="Login" position="-1 2.5 -3"></a-text>
+
+        <a-entity class="card" position="-1.5 1.5 -3">
+          <a-text value="Username" position="-0.5 1.2 0"></a-text>
+          <a-input type="text" position="0 1.2 0"></a-input>
+        </a-entity>
+
+        <a-entity class="card" position="-0.5 0.5 -3">
+          <a-text value="Password" position="-0.5 1.2 0"></a-text>
+          <a-input type="password" position="0 1.2 0"></a-input>
+        </a-entity>
+
+        <a-button value="Submit" position="-0.5 -1.5 -3"></a-button>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+<body>
+  <a-scene>
+    <a-assets>
+      <img id="forest-pano" src="./8hw0clw-360-panorama-miami.jpeg">
+    </a-assets>
+
+    <a-sky id="background" radius="10" src="#forest-pano"></a-sky>
+    
+    <a-entity id="resume">
+      <a-entity id="header" text="value: Resume; color: white; align: center; width: 10;" position="0 2 -5"></a-entity>
+      <a-entity id="education" text="value: Education; color: white; align: center; width: 5;" position="-2 0 -5" class="category"></a-entity>
+      <a-entity id="work" text="value: Work Experience; color: white; align: center; width: 5;" position="2 0 -5" class="category"></a-entity>
+      <a-entity id="skills" text="value: Skills; color: white; align: center; width: 5;" position="0 -2 -5" class="category"></a-entity>
+    </a-entity>
+    
+    <a-entity id="education-card" class="card" position="-5 0 -7" scale="0.5 0.5 0.5" visible="false">
+      <a-plane color="#6EC9CB" height="5" width="5"></a-plane>
+      <a-entity text="value: Education; color: black; align: center; width: 5;" position="0 2.5 -1"></a-entity>
+    </a-entity>
+
+  </a-scene>
+
+  <script>
+    const education = document.querySelector("#education");
+    const educationCard = document.querySelector("#education-card");
+
+    education.addEventListener("click", function() {
+      educationCard.setAttribute("visible", true);
+    });
+
+    educationCard.addEventListener("click", function() {
+      educationCard.setAttribute("visible", false);
+    });
+  </script>
+</body>
+</html> -->
+
